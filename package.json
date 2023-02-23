@@ -1,0 +1,26 @@
+{
+  "name": "html-portfolio",
+  "version": "1.0.0",
+  "description": "my_portfolio_page",
+  "main": "script.js",
+  "dependencies": {
+    "jpegtran-bin": "^4.0.0",
+    "optipng-bin": "^6.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "solonar96",
+  "license": "ISC"
+}
