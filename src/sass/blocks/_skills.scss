@@ -1,0 +1,70 @@
+.skills {
+	margin-top: 120px;
+	&__technology {
+		margin-top: 60px;
+		&__wrapper {
+			display: grid;
+			grid-template-rows: repeat(2,  minmax(270px, auto));
+			grid-auto-rows: 270px;
+			grid-template-columns: repeat(4, 270px);
+			gap: 13px;
+		}
+		&__item {
+			padding: 30px;
+			border: 1px solid #000;
+			&-icon {
+				height: 65px;
+				display: flex;
+				align-items: center;
+			}
+			&-title {
+				margin-top: 20px;
+			}
+			&-text {
+				margin-top: 15px;
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+	}
+	&__soft-skills {
+		margin-top: 120px;
+		&__wrapper {
+			display: grid;
+			grid-template-rows: repeat(2, 70px);
+			grid-auto-rows: 70px;
+			grid-template-columns: repeat(3, 350px);
+			row-gap: 30px;
+			column-gap: 45px;
+		}
+		&__item {
+			&-head {
+				position: relative;
+				padding: 8px 0 0 13px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				@include before_circle;
+				&:before {
+					top: 0;
+				}
+			}
+			&-scale {
+				position: relative;
+				&-gray {
+					margin-top: 27px;
+					background-color:#e8e4de;
+					border-radius: 4px;
+					width: 350px;
+					height: 14px
+				}
+				&-orange {
+					position: absolute;
+					background-color: $main-color;
+					border-radius: 4px;
+					height: 14px
+				}
+			}
+		}
+	}
+}
