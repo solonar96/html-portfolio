@@ -1,0 +1,86 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/title';
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.divider {
+	width: 60px;
+	height: 3px;
+    background-color: $main-color;
+	margin: 25px auto 0 auto;
+}
+
+.privacy {
+	padding: 120px 0 90px 0;
+	h1, h2, p {
+		margin-bottom: 0;
+	}
+	&__subtitle {
+		text-align: center;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+		&-general {
+			display: block;
+			margin-top: 60px;
+		}
+	}
+	&__collect {
+		margin-top: 30px;
+		&-text {
+			margin-top: 20px;
+		}
+		&-list {
+			margin-top: 15px;
+			display: grid;
+			grid-template-rows: 50px;
+			row-gap: 10px;
+		}
+		&-item {
+			display: grid;
+			grid-template-columns: 250px 500px;
+			position: relative;
+			padding-left: 50px;
+			font-size: 14px;
+			line-height: 21px;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 3px;
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				background-color: $main-color;
+			}
+		}
+	}
+	&__guard, &__rights, &__changes {
+		margin-top: 30px;
+		&-text {
+			margin-top: 20px;
+		}
+	}
+	&__questions {
+		margin-top: 30px;
+		text-align: center;
+		font-weight: 700;
+		a {
+			text-decoration: none;
+		}
+	}
+}
