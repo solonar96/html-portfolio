@@ -3,7 +3,6 @@
 
 @import 'base/variables';
 @import 'base/mixins';
-@import 'blocks/title';
 
 * {
 	font-family: 'Poppins', sans-serif;
@@ -84,3 +83,6 @@
 		}
 	}
 }
+
+@import 'blocks/title';
+@import 'blocks/media';
