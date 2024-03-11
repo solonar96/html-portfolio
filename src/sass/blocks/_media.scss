@@ -23,32 +23,32 @@
 	}
 	.resume {
 		&__wrapper {
-			padding: 60px 50px 0 50px;
-			grid-template-columns: repeat(2, 400px);
-			column-gap: 60px;
-		}
-		&__item {
-			&:before {
-				top: 53px;
-			}
-			&-head {
-				padding-top: 35px;
-			}
-			&-icon {
-				top: 35px;
-			}
+			padding: 40px 20px 0 20px;
+			column-gap: 70px;
 		}
 	}
 	.skills {
 		&__items {
-			margin: 60px 55px 0 55px;
 			grid-template-columns: repeat(auto-fit, 270px);
 			justify-content: space-between;
 		}
 		&__ratings {
-			margin: 80px 100px 0 100px;
 			grid-template-columns: repeat(auto-fit, 350px);
+			grid-auto-rows: minmax(70px, auto);
 			justify-content: space-between;
+			padding: 0 30px;
+		}
+	}
+	.portfolio {
+		&__wrapper {
+			grid-template-columns: repeat(auto-fit, 280px);
+			grid-auto-rows: 280px;
+			justify-content: space-around;
+			row-gap: 35px;
+			.horizontal, .vertical {
+				grid-row: unset;
+				grid-column: unset;
+			}
 		}
 	}
 }
@@ -79,7 +79,8 @@
 			row-gap: 25px;
 		}
 		&__skills {
-			grid-template: repeat(2,minmax(85px,auto)) / 380px;
+			grid-template-columns: 380px;
+			grid-auto-rows: minmax(115px, auto);
 			row-gap: 15px;
 			&-item {
 				grid-template-columns: 40px 320px;
@@ -89,29 +90,28 @@
 	}
 	.resume {
 		&__wrapper {
-			padding: 50px 0 0 0;
 			grid-template-columns: repeat(2, 340px);
 			column-gap: 40px;
-		}
-		&__item {
-			&:before {
-				top: 43px;
-			}
-			&-head {
-				padding-top: 25px;
-			}
-			&-icon {
-				top: 25px;
-			}
 		}
 	}
 	.skills {
 		&__items {
-			margin: 60px 60px 0 60px;
+			padding: 0 60px;
 		}
 		&__ratings {
-			margin: 80px 0 0 0;
-			column-gap: 20px;
+			grid-template-columns: repeat(auto-fit, 320px);
+			justify-content: space-between;
+			padding: 0;
+			column-gap: 0;
+			&-line {
+				width: 100%;
+			}
+		}
+	}
+	.pricelist {
+		&__items {
+			padding: 0;
+			grid-template-columns: repeat(auto-fit, 350px);
 		}
 	}
 }
@@ -119,6 +119,9 @@
 @media (max-width: 768px) {
 	.container {
 		max-width: 540px;
+	}
+	.divider {
+		margin-top: 15px;
 	}
 	.title {
 		&_fz48 {
@@ -135,7 +138,6 @@
 		padding-top: 40px;
 		&__wrapper {
 			grid-template: 400px auto auto / 1fr ;
-			column-gap: 40px;
 		}
 		&__photo {
 			grid-row: unset;
@@ -144,33 +146,48 @@
 			}
 		}
 		&__skills {
-			grid-template: repeat(2, minmax(115px, auto)) / repeat(2, minmax(260px, auto));
+			grid-template-columns: repeat(2, 260px);
 			grid-auto-rows: 1fr;
-			column-gap: 20px;
 			&-item {
 				grid-template-columns: 40px 200px;
-				column-gap: 15px;
+				column-gap: 20px;
 			}
 		}
 	}
 	.resume {
+		padding-top: 40px;
 		&__wrapper {
 			padding-top: 30px;
-			grid-template: auto auto / 1fr;
+			grid-template-columns: 1fr;
 			row-gap: 30px;
 		}
 	}
 	.skills {
+		padding-top: 40px;
 		&__items {
-			margin: 60px auto 0 auto;
 			justify-content: center;
 		}
 		&__ratings {
-			margin: 80px auto 0 auto;
+			grid-template-columns: repeat(auto-fit, 320px);
 			justify-content: center;
+			margin-top: 40px;
 			&-line {
 				width: 100%;
 			}
+		}
+	}
+	.portfolio {
+		padding-top: 40px;
+		&__wrapper {
+			padding-top: 40px;
+			row-gap: 20px;
+		}
+	}
+	.pricelist {
+		padding-top: 40px;
+		&__items {
+			margin-top: 20px;
+			justify-content: center;
 		}
 	}
 }
@@ -186,11 +203,7 @@
 		}
 		&_fz36 {
 			font-size: 24px;
-		}
-		&__section {
-			&-subtitle {
-				line-height: 36px;
-			}
+			line-height: 36px;
 		}
 	}
 	.hamburger {
@@ -204,10 +217,6 @@
 	}
 	.promo {
 		background: url('../img/main-bg.jpg') no-repeat 55% / cover;
-		&__title {
-			width: 300px;
-			line-height: 39px;
-		}
 		&__btns {
 			margin-top: 32px;
 		}
@@ -220,16 +229,23 @@
 			grid-template-columns: 1fr;
 		}
 	}
+	.resume {
+		&__wrapper {
+			padding: 40px 5px 0 5px;
+		}
+	}
 	.skills {
-		margin-top: 40px;
 		&__items {
 			margin-top: 20px;
-			row-gap: 20px;
-			justify-content: center;
 		}
 		&__ratings {
-			margin-top: 40px;
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(auto-fit, 300px);
+		}
+	}
+	.pricelist {
+		padding-top: 40px;
+		&__items {
+			grid-template-columns: 300px;
 		}
 	}
 }
