@@ -35,7 +35,7 @@
 		row-gap: 30px;
 		&-item {
 			display: grid;
-			grid-template: minmax(21px, auto) 14px / 200px 35px;
+			grid-template: minmax(21px, auto) 14px / 200px minmax(35px, auto);
 			justify-content: space-between;
 			align-content: space-between;
 		}
@@ -46,6 +46,11 @@
 			&:before {
 				top: 0;
 			}
+		}
+		&-counter {
+			margin-top: 8px;
+			font-size: 14px;
+			line-height: 21px;
 		}
 		&-line {
 			background-color:#e8e4de;
