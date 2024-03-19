@@ -22,18 +22,23 @@ counters.forEach( (item, i) => {
 	lines[i].style.width = item.innerHTML;
 });
 
+const sidePanelLink = document.querySelectorAll('.sidepanel__link'),
+	  sidePanelDivider = document.querySelector('.sidepanel__divider'),
+	  sidePanelText = document.querySelector('.sidepanel__text'),
+	  sidePanel = document.querySelector('.sidepanel');
 
-// const sidePanelLink = document.querySelectorAll('.sidepanel__link'),
-// 	  sidePanelDivider = document.querySelector('.sidepanel__divider'),
-// 	  sidePanelText = document.querySelector('.sidepanel__text'),
-// 	  initialHeight = document.documentElement.scrollTop + 560,
-// 	  heightToChange = document.documentElement.scrollHeight - 450,
-// 	  sidePanel = document.querySelector('.sidepanel');
-
-// sidePanel.addEventListener('scroll', function() {
-// 	if (Math.abs(document.documentElement.scrollTop - initialHeight) >= heightToChange) {
-// 		sidePanelLink.classList.add('sidepanel__link-black');
-// 		sidePanelDivider.classList.add('sidepanel__divider-black');
-// 		sidePanelText.classList.add('sidepanel__text-black');
-// 	}
-// });
+window.addEventListener('scroll', e => {
+	if (this.scrollY >= 500) {
+		sidePanelLink.forEach(item => {
+			item.classList.add('sidepanel__link-black');
+		})
+		sidePanelDivider.classList.add('sidepanel__divider-black');
+		sidePanelText.classList.add('sidepanel__text-black');
+	} else {
+		sidePanelLink.forEach(item => {
+			item.classList.remove('sidepanel__link-black');
+		})
+		sidePanelDivider.classList.remove('sidepanel__divider-black');
+		sidePanelText.classList.remove('sidepanel__text-black');
+	}
+});

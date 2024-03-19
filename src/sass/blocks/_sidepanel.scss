@@ -17,28 +17,28 @@
                 transition: all .5s;
             }
         }
-        // &-black {
-        //     svg path {
-        //         fill: #000;
-        //         transition: all .5s;
-        //     }
-        // }
+        &-black {
+            svg path {
+                fill: #000;
+                transition: all .5s;
+            }
+        }
     }
     &__divider {
         width: 2px;
         height: 70px;
         background-color: #fff;
-        // &-black {
-        //     background-color: #000;
-        // }
+        &-black {
+            background-color: #000;
+        }
     }
     &__text {
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         font-weight: bold;
         color: #fff;
-        // &-black {
-        //     color: #000;
-        // }
+        &-black {
+            color: #000;
+        }
     }
 }
